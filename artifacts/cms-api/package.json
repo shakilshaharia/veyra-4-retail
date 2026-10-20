@@ -1,0 +1,51 @@
+{
+  "name": "@workspace/cms-api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=.env src/index.ts",
+    "build": "node scripts/build.mjs",
+    "start": "node --env-file-if-exists=.env dist/index.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --env-file-if-exists=.env --import tsx --test test/*.test.ts",
+    "db:start": "node scripts/dev-db.mjs start",
+    "db:stop": "node scripts/dev-db.mjs stop",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:seed": "tsx --env-file-if-exists=.env prisma/seed.ts",
+    "db:reset": "prisma migrate reset --force",
+    "create-admin": "tsx --env-file-if-exists=.env scripts/create-admin.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.1149.0",
+    "@prisma/adapter-mariadb": "7.10.0",
+    "@prisma/client": "7.10.0",
+    "@workspace/cms-content": "workspace:*",
+    "bcryptjs": "3.0.3",
+    "cookie-parser": "1.4.7",
+    "express": "5.3.0",
+    "express-rate-limit": "8.7.1",
+    "helmet": "8.3.0",
+    "multer": "2.4.0",
+    "nodemailer": "10.1.0",
+    "qrcode": "1.5.4",
+    "sanitize-html": "2.18.0",
+    "sharp": "0.35.5",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.9",
+    "@types/express": "^5.0.3",
+    "@types/multer": "^2.0.0",
+    "@types/node": "catalog:",
+    "@types/nodemailer": "^7.0.2",
+    "@types/qrcode": "^1.5.5",
+    "@types/sanitize-html": "^2.16.0",
+    "esbuild": "^0.25.10",
+    "prisma": "7.10.0",
+    "tsx": "catalog:",
+    "typescript": "~5.9.3"
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "width": 1366,
+    "transition": "1-2",
+    "reversalDocumentDelta": 120,
+    "reversalIncomingDelta": 128.4375
+  },
+  {
+    "width": 1366,
+    "transition": "2-3",
+    "reversalDocumentDelta": 120,
+    "reversalIncomingDelta": 136.875
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "nativeDown": true,
+    "nativeUp": true,
+    "midpointReverse": true,
+    "pinnedTileVisible": true,
+    "parentRelease": true,
+    "releaseScroll": 4578
+  },
+  {
+    "automaticAfterTenSeconds": true,
+    "manualReset": true,
+    "hoverDoesNotPause": true
+  }
+]

@@ -1,0 +1,27 @@
+# Dependencies and caches
+node_modules/
+.npm-cache/
+.pnpm-store/
+
+# Build output
+dist/
+artifacts/cms-api/src/generated/
+*.tsbuildinfo
+
+# Secrets and machine-local state: never commit these
+.env
+.env.*
+!.env.example
+.dev-credentials
+.tools/
+artifacts/cms-api/uploads/
+artifacts/cms-api/dev-mail/
+
+# Logs and OS clutter
+*.log
+.DS_Store
+Thumbs.db
+.pgdata/
+
+# Claude Code local config
+.claude/
